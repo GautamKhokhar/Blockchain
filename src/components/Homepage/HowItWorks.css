@@ -1,0 +1,453 @@
+/* HowItWorks.css - Professional Flowchart Design */
+
+:root {
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --accent: #0891b2;
+  --success: #059669;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-light: #64748b;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-light: #f1f5f9;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+/* Main Section */
+.how-it-works-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+}
+
+/* Header Section */
+.sections-headers {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.headers-badges {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.sections-titles {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.sections-descriptions {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Flowchart Container */
+.flowchart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Flowchart Rows */
+.flowchart-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.flowchart-row.reverse {
+  direction: rtl;
+}
+
+.flowchart-row.reverse * {
+  direction: ltr;
+}
+
+/* Flow Elements */
+.flow-element {
+  background: var(--bg-primary);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flow-element:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+/* Start Element */
+.start-element {
+  background: linear-gradient(135deg, var(--success) 0%, #10b981 100%);
+  color: white;
+  border-color: var(--success);
+  text-align: center;
+}
+
+/* Process Elements */
+.process-element {
+  position: relative;
+}
+
+.step-1 { border-left: 4px solid var(--primary); }
+.step-2 { border-left: 4px solid var(--accent); }
+.step-3 { border-left: 4px solid #7c3aed; }
+.step-4 { border-left: 4px solid #dc2626; }
+
+.element-badge {
+  position: absolute;
+  top: -10px;
+  left: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.step-2 .element-badge { background: var(--accent); }
+.step-3 .element-badge { background: #7c3aed; }
+.step-4 .element-badge { background: #dc2626; }
+
+/* Decision Element */
+.decision-element {
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* End Element */
+.end-element {
+  background: linear-gradient(135deg, var(--success) 0%, #10b981 100%);
+  color: white;
+  border-color: var(--success);
+  text-align: center;
+}
+
+/* Element Content */
+.element-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.process-element .element-content {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.element-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.start-icon, .end-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.decision-icon {
+  background: #f59e0b;
+}
+
+.step-2 .element-icon { background: var(--accent); }
+.step-3 .element-icon { background: #7c3aed; }
+.step-4 .element-icon { background: #dc2626; }
+
+.element-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2;
+}
+
+.element-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.start-element h3,
+.end-element h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.decision-element h3 {
+  color: #92400e;
+  font-size: 1.125rem;
+}
+
+.element-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.start-element p,
+.end-element p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.decision-element p {
+  color: #92400e;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Tech Tags */
+.tech-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-tags span {
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.step-1:hover .tech-tags span { background: rgba(37, 99, 235, 0.1); color: var(--primary); }
+.step-2:hover .tech-tags span { background: rgba(8, 145, 178, 0.1); color: var(--accent); }
+.step-3:hover .tech-tags span { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
+.step-4:hover .tech-tags span { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
+
+/* Flow Connectors */
+.flow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-connector.horizontal {
+  width: 100px;
+  height: 2px;
+}
+
+.flow-connector.vertical {
+  width: 2px;
+  height: 60px;
+  margin: -1rem auto;
+}
+
+.flow-connector.vertical.left {
+  margin-left: 33.33%;
+  transform: translateX(-50%);
+}
+
+.flow-connector.vertical.right {
+  margin-left: 66.66%;
+  transform: translateX(-50%);
+}
+
+.connector-line {
+  background: var(--primary);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flow-connector.horizontal .connector-line {
+  height: 2px;
+}
+
+.flow-connector.vertical .connector-line {
+  width: 2px;
+}
+
+.connector-arrow {
+  position: absolute;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid var(--primary);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.flow-connector.vertical .connector-arrow {
+  bottom: -5px;
+  right: 50%;
+  transform: translateX(50%) rotate(90deg);
+}
+
+/* Spacer Elements */
+.spacer-element {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .flowchart-row {
+    gap: 1rem;
+  }
+  
+  .flow-connector.horizontal {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-section {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .sections-title {
+    font-size: 2rem;
+  }
+  
+  .flowchart-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .flowchart-row.reverse {
+    direction: ltr;
+  }
+  
+  .flow-connector.horizontal {
+    display: none;
+  }
+  
+  .flow-connector.vertical {
+    width: 2px;
+    height: 40px;
+    margin: 1rem auto;
+  }
+  
+  .flow-connector.vertical.left,
+  .flow-connector.vertical.right {
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+  }
+  
+  .process-element .element-content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .flow-element {
+    min-height: 160px;
+    padding: 1.5rem;
+  }
+  
+  .decision-element {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sections-title {
+    font-size: 1.75rem;
+  }
+  
+  .flow-element {
+    padding: 1.25rem;
+    min-height: 140px;
+  }
+  
+  .element-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .element-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .element-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .decision-element {
+    width: 130px;
+    height: 130px;
+  }
+}

@@ -1,0 +1,104 @@
+.contact-section {
+  display: flex;
+  min-height: 120vh;
+  flex-wrap: nowrap;
+}
+
+/* Left diagonal image */
+.contact-image {
+  flex: 1.6; /* ✅ wider image, but leaves room for form */
+  background: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29udGFjdHxlbnwwfHwwfHx8MA%3D%3D") no-repeat center center/cover;
+  position: relative;
+  /* ✅ more generous diagonal (was 70/50 → now 80/60) */
+  clip-path: polygon(0 0, 120% 0%, 80% 120%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.overlay-text {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Right form section */
+.contact-form-container {
+  flex: 1; /* ✅ keep form visible */
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Glassmorphism form */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+}
+
+.form-heading {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #0077b6;
+  text-align: center;
+  text-shadow: 0px 0px 6px rgba(0, 119, 182, 0.4);
+}
+
+/* Input styles */
+.form-control {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #333;
+}
+
+.form-control::placeholder {
+  color: #666;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #333;
+  box-shadow: none;
+}
+
+.input-group-text {
+  background: #0077b6;
+  color: #fff;
+  border: none;
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  border: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+/* --- Responsive Fix --- */
+@media (max-width: 992px) {
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-image {
+    flex: none;
+    width: 100%;
+    min-height: 40vh;
+    clip-path: none; /* remove diagonal for small screens */
+  }
+  .contact-form-container {
+    flex: none;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}

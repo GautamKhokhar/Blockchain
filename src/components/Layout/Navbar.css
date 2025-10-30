@@ -1,0 +1,292 @@
+/* --- Navbar Container --- */
+.cs-navbar-modern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1030;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.cs-navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+/* --- Navbar Container --- */
+.cs-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Brand Styles --- */
+.cs-navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.cs-navbar-brand:hover {
+  transform: translateY(-2px);
+}
+
+.cs-brand-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3f51b5, #7986cb);
+  border-radius: 10px;
+  margin-right: 12px;
+  box-shadow: 0 4px 10px rgba(63, 81, 181, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cs-navbar-brand:hover .cs-brand-icon-wrapper {
+  transform: rotate(15deg);
+  box-shadow: 0 6px 15px rgba(63, 81, 181, 0.3);
+}
+
+.cs-brand-icon {
+  color: white !important;
+  font-size: 1.2rem;
+}
+
+.cs-brand-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2c3e50, #3f51b5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Navbar Toggler --- */
+.cs-navbar-toggler {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.cs-navbar-toggler-line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(135deg, #2c3e50, #3f51b5);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.cs-navbar-toggler-active .cs-navbar-toggler-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.cs-navbar-toggler-active .cs-navbar-toggler-line:nth-child(2) {
+  opacity: 0;
+}
+
+.cs-navbar-toggler-active .cs-navbar-toggler-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* --- Navbar Collapse --- */
+.cs-navbar-collapse {
+  display: flex;
+  align-items: center;
+}
+
+.cs-navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.cs-nav-item {
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+.cs-nav-item-cta {
+  margin-left: 1rem;
+}
+
+/* --- Nav Links --- */
+.cs-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #2c3e50 !important;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(63, 81, 181, 0.1), transparent);
+  transition: left 0.7s ease;
+}
+
+.cs-nav-link:hover::before {
+  left: 100%;
+}
+
+.cs-nav-link:hover {
+  background: rgba(63, 81, 181, 0.05);
+  transform: translateY(-2px);
+}
+
+.cs-nav-icon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #3f51b5;
+  transition: transform 0.3s ease;
+}
+
+.cs-nav-link:hover .cs-nav-icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* --- Connect Button --- */
+.cs-connect-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(63, 81, 181, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-connect-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.cs-connect-btn:hover::before {
+  left: 100%;
+}
+
+.cs-connect-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(63, 81, 181, 0.4);
+}
+
+.cs-connect-icon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 992px) {
+  .cs-navbar-toggler {
+    display: flex;
+  }
+  
+  .cs-navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5rem 1.5rem 2rem;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cs-navbar-collapse-open {
+    right: 0;
+  }
+  
+  .cs-navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cs-nav-item {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .cs-nav-item-cta {
+    margin: 1.5rem 0 0 0;
+  }
+  
+  .cs-nav-link {
+    padding: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .cs-connect-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Animation for navbar items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cs-nav-item {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.cs-nav-item:nth-child(1) { animation-delay: 0.1s; }
+.cs-nav-item:nth-child(2) { animation-delay: 0.2s; }
+.cs-nav-item:nth-child(3) { animation-delay: 0.3s; }
+.cs-nav-item:nth-child(4) { animation-delay: 0.4s; }
+.cs-nav-item:nth-child(5) { animation-delay: 0.5s; }

@@ -1,0 +1,317 @@
+/* InfoCard.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.header-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    opacity: 0.3;
+}
+
+.section-header h2 {
+    margin: 0 25px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+/* Modern Card Styles */
+.modern-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    background: white;
+    position: relative;
+}
+
+.modern-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    z-index: 2;
+}
+
+.modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.12);
+}
+
+.cards-contents {
+    display: flex;
+    min-height: 500px;
+}
+
+.cards-contents.reverse {
+    flex-direction: row-reverse;
+}
+
+.cards-texts {
+    flex: 1;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 3px;
+}
+
+.accent-bar.green {
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+}
+
+.card-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.card-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, transparent);
+    border-radius: 2px;
+}
+
+/* Ethereum Section */
+.ethereum-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+.milestone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.milestone-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(52, 152, 219, 0.05);
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.milestone-item:hover {
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 3px solid #3498db;
+    transform: translateX(5px);
+}
+
+.milestone-year {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    min-width: 80px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.milestone-content h4 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.milestone-content p {
+    margin: 0;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Hardhat Section */
+.hardhat-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+    padding: 80px 0;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #5a6c7d;
+    margin-bottom: 35px;
+    padding: 15px;
+    background: rgba(46, 204, 113, 0.05);
+    border-left: 3px solid #2ecc71;
+    border-radius: 4px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(46, 204, 113, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(46, 204, 113, 0.3);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.icon-circle::before {
+    content: '✓';
+    font-size: 1.2rem;
+}
+
+.feature-content h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.feature-content p {
+    margin: 0;
+    color: #7f8c8d;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Image Styling */
+.card-image {
+    flex: 1;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.3), rgba(41, 128, 185, 0.1));
+    mix-blend-mode: multiply;
+}
+
+.image-overlay.green {
+    background: linear-gradient(45deg, rgba(46, 204, 113, 0.3), rgba(39, 174, 96, 0.1));
+}
+
+.modern-card:hover .image-container img {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .card-content {
+        flex-direction: column;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .card-text {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .milestone-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .milestone-year {
+        align-self: center;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-line {
+        width: 100px;
+    }
+}

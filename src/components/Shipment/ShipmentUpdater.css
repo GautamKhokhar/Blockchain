@@ -1,0 +1,182 @@
+/* ShipmentUpdater.css */
+.updater-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+}
+
+.updater-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.updater-card-header {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  border-bottom: none;
+}
+
+.updater-card-header h5 {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color:white;
+}
+
+.updater-card-body {
+  padding: 1.5rem;
+}
+
+.updater-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  align-items: end;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  background-color: #fafafa;
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: #f39c12;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+  background-color: white;
+}
+
+.form-input::placeholder {
+  color: #a0a0a0;
+}
+
+.action-button-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.action-button {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(243, 156, 18, 0.3);
+}
+
+.action-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(243, 156, 18, 0.4);
+}
+
+.action-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.action-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  grid-column: 2 / span 2;
+}
+
+.fetching-indicator {
+  color: #7f8c8d;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.not-allowed-message {
+  color: #e74c3c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.message-alert {
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.message-alert.success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #27ae60;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.message-alert.error {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .updater-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .updater-card-body {
+    padding: 1.2rem;
+  }
+  
+  .status-message {
+    grid-column: 1;
+  }
+  
+  .action-button {
+    padding: 0.75rem 1rem;
+  }
+}
