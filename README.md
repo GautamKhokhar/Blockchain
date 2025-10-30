@@ -1,12 +1,19 @@
-# React + Vite
+Blockchain-Based Supply Chain Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Transparent, Secure, and Role-Based Blockchain DApp for Product Tracking
 
-Currently, two official plugins are available:
+🧾 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a Blockchain-Based Supply Chain Management System built using Ethereum Smart Contracts (Solidity) and Hardhat. It enables a secure and transparent product movement process from Supplier → Manufacturer → Transporter → Retailer — all governed by blockchain-based smart contracts.
 
-## Expanding the ESLint configuration
+The Admin manages the supply chain network by granting specific roles to participants and monitoring shipment activities in real-time.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎯 Objectives
+
+Eliminate fraud and counterfeit products.
+
+Ensure full traceability of goods in the supply chain.
+
+Use blockchain transparency to maintain trust among participants.
+
+Digitally automate the shipment process with smart contracts.
